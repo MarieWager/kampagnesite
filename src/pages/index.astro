@@ -1,7 +1,13 @@
 ---
 import "../styles/style.css";
-
-
+import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import AdvantagesBox from "../components/AdvantagesBox.astro";
+import Citation from "../components/Citation.astro";
+import SectionGuide from "../components/SectionGuide.astro";
+import Rating from "../components/Rating.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -10,10 +16,20 @@ import "../styles/style.css";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="">
   <title>Bliv frivillig</title>
+  <link rel="stylesheet" href="https://use.typekit.net/dtm7vhs.css">
+
 </head>
 
 <body>
-	
+	<Navigation />
+  <Header></Header>
+  <SectionIntro></SectionIntro>
+  <AdvantagesBox title="Gode grunde til at være frivillig"></AdvantagesBox>
+  <Citation></Citation>
+  <SectionGuide></SectionGuide>
+  <Rating></Rating>
+  <Footer />
 </body>
 </html>
