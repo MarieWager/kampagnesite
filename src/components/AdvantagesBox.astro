@@ -5,14 +5,19 @@ const {title} = Astro.props;
 
 <section>
     <h1>{title}</h1>
-    <p><Advantage subtitle="Fælleskab og netværk" icon="./icons/people.svg" text="Bliv en del af et varmt og fagligt fællesskab, hvor du skaber meningsfulde forbindelser med dedikerede frivillige fra hele landet."/></p>
-    <p><Advantage subtitle="Personlig udvikling" icon="./icons/plant.svg" text="Styrk dine empatiske og faglige færdigheder, samtidig med at du får værdifuld erfaring, der kan være et plus på CV'et."/></p>
-    <p><Advantage subtitle="Meningsfuldt arbejde" icon="./icons/hand.svg" text="Oplev, hvordan din indsats gør en reel forskel for familier og skaber positiv forandring i deres liv."/></p>
-    <p><Advantage subtitle="Fleksibilitet og støtte" icon="./icons/time.svg" text="Få et frivilligjob med et skema, du selv kan tilrettelægge, og modtag støtte fra en mentor og erfarne kollegaer."/></p>
+    <div class="grid_1-1">
+        <p><Advantage subtitle="Fælleskab og netværk" icon="./icons/people.svg" text="Bliv en del af et varmt og fagligt fællesskab, hvor du skaber meningsfulde forbindelser med dedikerede frivillige fra hele landet."/></p>
+        <p><Advantage subtitle="Personlig udvikling" icon="./icons/plant.svg" text="Styrk dine empatiske og faglige færdigheder, samtidig med at du får værdifuld erfaring, der kan være et plus på CV'et."/></p>
+        <p><Advantage subtitle="Meningsfuldt arbejde" icon="./icons/hand.svg" text="Oplev, hvordan din indsats gør en reel forskel for familier og skaber positiv forandring i deres liv."/></p>
+        <p><Advantage subtitle="Fleksibilitet og støtte" icon="./icons/time.svg" text="Få et frivilligjob med et skema, du selv kan tilrettelægge, og modtag støtte fra en mentor og erfarne kollegaer."/></p>
+    </div>
 </section>
 
 <style>
     section {
+        padding: var(--with);
+    }
+    .grid_1-1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 35px;
