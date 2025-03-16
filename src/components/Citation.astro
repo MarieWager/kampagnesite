@@ -1,0 +1,25 @@
+---
+import Button from "./Button.astro";
+const {text} = Astro.props;
+---
+
+<section>
+    <h1 class="quotation">"</h1>
+    <p>{text}</p>
+    <Button text="LÆS MERE" />
+</section>
+
+<style>
+    section {
+        position: relative;
+    }
+    .quotation {
+        color: var(--turquoise);
+        position: absolute;
+        left: 10px;
+    }
+    p {
+        padding: var(--with);
+    }
+</style>
+
