@@ -16,14 +16,17 @@ const {goto, text, variant} = Astro.props;
     .dark {
         color: var(--light-grey);
         background-color: var(--dark-turquoise);
+        transition: 1s ease;
     }
 
     .light {
         color: var(--light-grey);
         background-color: var(--turquoise);
+        transition: 1s ease;
     }
 
     .dark:hover,.light:hover {
         background-color: var(--orange);
+        transition: 1s ease;
     }
 </style>
