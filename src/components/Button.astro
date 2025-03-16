@@ -12,7 +12,6 @@ const {goto, text, variant} = Astro.props;
         text-decoration: none;
         padding: 12px;
         border-radius: 26px;
-        right: 250px;
     }
 
     .dark {
@@ -25,10 +24,17 @@ const {goto, text, variant} = Astro.props;
         color: var(--light-grey);
         background-color: var(--turquoise);
         transition: 1s ease;
+        right: 40px;
     }
 
     .dark:hover,.light:hover {
         background-color: var(--orange);
         transition: 1s ease;
     }
+
+    @media (min-width: 900px) {
+        .light {
+            right: 250px;
+        }
+    } 
 </style>
