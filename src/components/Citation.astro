@@ -6,12 +6,14 @@ const {text} = Astro.props;
 <section>
     <h1 class="quotation">"</h1>
     <p>{text}</p>
-    <Button text="LÆS MERE" />
+    <Button variant="light" text="LÆS MERE" />
 </section>
 
 <style>
     section {
         position: relative;
+        background-color: var(--dark-turquoise);
+        border-radius: 5px;
     }
     .quotation {
         color: var(--turquoise);
