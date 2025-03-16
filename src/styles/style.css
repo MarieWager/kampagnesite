@@ -68,6 +68,7 @@ p {
 
 @media (min-width: 900px) {
   .woman {
+    display: flex;
     position: absolute;
     right: -94px;
     width: 293px;
