@@ -85,4 +85,9 @@ p {
   --with: 0 40px;
 }
 
-/* til paddings af sektioner  */
+.woman {
+  position: absolute;
+  right: 0;
+  height: 802px;
+  width: 412px;
+}
