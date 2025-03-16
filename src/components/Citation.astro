@@ -27,8 +27,13 @@ const {text} = Astro.props;
     }
     p {
         padding: var(--with);
+    }
+
+    @media (min-width: 900px) {
+        p {
         padding-right: 250px;
     }
+}
 
     /* Button {
         right: 20px;
