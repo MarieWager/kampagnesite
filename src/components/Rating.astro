@@ -1,0 +1,26 @@
+---
+import Card from "./Card.astro";
+const {title} = Astro.props;
+---
+
+<section>
+    <h1>{title}</h1>
+
+    <div class="card">
+
+    <p><Card icon="./img/Face_A.svg" name="Anette" icon="./img/apo_light.svg" text="For mig handler det om at gøre noget godt for andre – at vide, at min indsats virkelig gør en forskel, der hvor der er brug for det." icon="./icons/thumb_light.svg"/></p>
+   
+    <p><Card icon="./img/Face_B.svg" name="Hjalmer" icon="./img/apo_medium.svg" text="Frivilligt arbejde giver mig muligheden for at gøre en forskel, møde nye mennesker og bruge min tid på noget, der virkelig betyder noget." icon="./icons/thumb_medium.svg"/></p>
+   
+    <p><Card icon="./img/Face_C.svg" name="Mads" icon="./img/apo_dark.svg" text="Der er noget helt særligt ved at vide, at man hjælper nogen, der virkelig har brug for det – det gør frivilligt arbejde så givende." icon="./icons/thumb_dark.svg"/></p>
+
+    </div>
+
+</section>
+
+<style>
+    img {
+        height: 85px;
+        width: 85px;
+    }
+</style>

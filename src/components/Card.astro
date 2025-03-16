@@ -1,0 +1,18 @@
+---
+const {icon, img, name, text} = Astro.props;
+---
+
+<section>
+    <img src=`${img}` alt="Face">
+    <h3>{name}</h3>
+    <img src=`${img}` alt="Apostrophe">
+    <p>{text}</p>
+    <img src=`${icon}` alt="Rate">
+</section>
+
+<style>
+    img {
+        height: 85px;
+        width: 85px;
+    }
+</style>
