@@ -12,8 +12,14 @@ const {goto, text, variant} = Astro.props;
         text-decoration: none;
         padding: 12px;
         border-radius: 26px;
-        right: 250px;
+        right: 40px;
     }
+    @media (min-width: 900px) {
+        a {
+            right: 250px;
+        }
+    }   
+    
 
     .dark {
         color: var(--light-grey);
