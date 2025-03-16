@@ -21,15 +21,19 @@ const {text} = Astro.props;
     .quotation {
         color: var(--turquoise);
         position: absolute;
-        left: 11px;
-        font-size: 5rem;
-        top: 40px;
+        left: 21px;
+        font-size: 6rem;
+        top: 25px;
     }
     p {
         padding: var(--with);
     }
 
     @media (min-width: 900px) {
+        .quotation {
+            left: 48px;
+            top: 40px;
+        }
         p {
         padding-right: 250px;
     }
