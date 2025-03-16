@@ -86,8 +86,14 @@ p {
 }
 
 .woman {
-  position: absolute;
-  right: -94px;
-  width: 293px;
-  top: 889px;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .woman {
+    position: absolute;
+    right: -94px;
+    width: 293px;
+    top: 889px;
+  }
 }
