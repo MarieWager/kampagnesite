@@ -59,6 +59,7 @@ a {
 p {
   font-family: poppins, sans-serif;
   font-size: 0.9rem;
+  line-height: 20px;
 }
 
 @media (min-width: 900px) {
@@ -77,6 +78,7 @@ p {
 
   p {
     font-size: 1.2rem;
+    line-height: 26px;
   }
 }
 
