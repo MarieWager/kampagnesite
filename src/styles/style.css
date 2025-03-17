@@ -36,7 +36,6 @@ body {
 }
 
 /* fonts */
-/* vi mangler at vælge størrelser både til mobil og desktop */
 h1 {
   font-family: roca, sans-serif;
   font-weight: bold;
@@ -69,7 +68,7 @@ p {
 
 @media (min-width: 900px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   h2 {
