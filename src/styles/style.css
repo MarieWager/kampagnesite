@@ -49,7 +49,12 @@ h2 {
   font-size: 1.5rem;
 }
 
-h3,
+h3 {
+  font-family: poppins, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 a {
   font-family: poppins, sans-serif;
   font-weight: bold;
@@ -71,7 +76,10 @@ p {
     font-size: 1.8rem;
   }
 
-  h3,
+  h3 {
+    font-size: 1.5rem;
+  }
+
   a {
     font-size: 1rem;
   }
