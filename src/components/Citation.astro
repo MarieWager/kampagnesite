@@ -4,13 +4,16 @@ const {text, apo} = Astro.props;
 ---
 
 <section>
-    <img src=`${apo}` alt="Apostrophe" class="quotation"/>
-    <p>{text}</p>
-    <Button variant="light" goto="https://www.misbrugsportalen.dk" text="LÆS MERE" />
+    <div class="citat">
+        <img src=`${apo}` alt="Apostrophe" class="quotation"/>
+        <p>{text}</p>
+        <Button variant="light" goto="https://www.misbrugsportalen.dk" text="LÆS MERE" />
+    </div>
+    <img class="woman" src="public/woman.svg" alt="Illustration">
 </section>
 
 <style>
-    section {
+    .citat {
         position: relative;
         background-color: var(--dark-turquoise);
         border-radius: 8px;
@@ -32,6 +35,10 @@ const {text, apo} = Astro.props;
         padding-left: 60px;
     }
 
+    .woman {
+        display: none;
+        }
+
     @media (min-width: 900px) {
         .quotation {
             top: 70px;
@@ -47,11 +54,14 @@ const {text, apo} = Astro.props;
         padding: 80px 0;
         margin: var(--with);
         margin-top: 190px;
-    }
-    }
+        }
 
-    /* Button {
-        right: 20px;
-    } */
+        .woman {
+            display: flex;
+            position: absolute;
+            width: 210px;
+            right: 0;
+        }
+    }
 </style>
 

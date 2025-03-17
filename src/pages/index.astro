@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import Navigation from "../components/Navigation.astro";
-import Header from "../components/Header.astro";
+import HeaderIntro from "../components/HeaderIntro.astro";
 import SectionIntro from "../components/SectionIntro.astro";
 import AdvantagesBox from "../components/AdvantagesBox.astro";
 import Citation from "../components/Citation.astro";
@@ -19,16 +19,14 @@ import Footer from "../components/Footer.astro";
   <meta name="description" content="Bliv frivillig rådgiver i Pårørende Netværk og gør en forskel for pårørende til misbrugere. Få meningsfuldt arbejde, udvikl dine færdigheder og bliv en del af et stærkt fællesskab. Læs mere og ansøg i dag!">
   <title>Bliv frivillig</title>
   <link rel="stylesheet" href="https://use.typekit.net/dtm7vhs.css">
-
 </head>
 
 <body>
 	<Navigation />
-  <Header></Header>
+  <HeaderIntro title="Bliv frivillig rådgiver" img="./puzzle.webp" intro="Gør en forskel for pårørende i svære tider. Bliv en del af et stærkt fællesskab, hvor du kan hjælpe andre ved skabe tryghed og støtte."></HeaderIntro>
   <SectionIntro></SectionIntro>
   <AdvantagesBox title="Gode grunde til at være frivillig"></AdvantagesBox>
   <Citation apo="./img/apo_medium.svg" text="En fin samtale og enorm dygtig rådgiver. Føler mig så heldig, at jeg har fået ham. Der er efter min erfaring stor mangel på støtte og hjælp til pårørende og især i det her område, hvor jeg bor."></Citation>
-  <img class="woman" src="public/woman.svg" alt="Illustration">
   <SectionGuide></SectionGuide>
   <Rating title="Frivillige" title_2="Fortællinger"></Rating>
   <Footer />
