@@ -95,16 +95,6 @@ p {
   --with: 0 100px;
 }
 
-.woman {
-  display: none;
-}
-
-@media (min-width: 900px) {
-  .woman {
-    display: flex;
-    position: absolute;
-    right: -14px;
-    width: 210px;
-    top: 936px;
-  }
+section {
+  margin-bottom: 200px;
 }
