@@ -1,17 +1,49 @@
 ---
-const {title,text,img} = Astro.props;
+const { title, text1, text2, img } = Astro.props;
 ---
 
 <section>
-    <div class="box">
-        <h2>{title}</h2>
-        <p>{text}</p>
+  <img src=`${img}` alt="Volunteer image" />
+  <div class="box">
+    <div>
+      <h2>{title}</h2>
+      <p>{text1}</p>
+      <br /><br />
     </div>
-    <img src=`${img}` alt="Volunteer image">
+    <p>{text2}</p>
+  </div>
 </section>
 
 <style>
-    .box {
-        background-color: var(--turquoise);
+  section {
+    background-color: var(--turquoise);
+    color: var(--light-grey);
+  }
+
+  @media (min-width: 900px) {
+    section {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 5% 1fr 5%;
+      grid-template-rows: 5% 1fr 5%;
     }
+    .box {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      padding: 28px;
+      padding-bottom: 120px;
+      padding-top: 120px;
+    }
+
+    img {
+      position: absolute;
+      left: 7%;
+      width: 39%;
+      top: 44px;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+    }
+  }
 </style>
