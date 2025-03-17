@@ -1,10 +1,10 @@
 ---
 import Button from "./Button.astro";
-const {text} = Astro.props;
+const {text, apo} = Astro.props;
 ---
 
 <section>
-    <h1 class="quotation">"</h1>
+    <img src=`${apo}` alt="Apostrophe" class="quotation"/>
     <p>{text}</p>
     <Button variant="light" goto="https://www.misbrugsportalen.dk" text="LÆS MERE" />
 </section>
@@ -15,15 +15,17 @@ const {text} = Astro.props;
         background-color: var(--dark-turquoise);
         border-radius: 5px;
         padding: 80px 0;
+        margin: var(--with);
         margin-top: 190px;
         color: var(--light-grey);
     }
     .quotation {
         color: var(--turquoise);
         position: absolute;
-        left: 21px;
-        font-size: 6rem;
+        left: 44px;
         top: 25px;
+        height: 4rem;
+        width: 3rem;
     }
     p {
         padding: var(--with);
@@ -31,13 +33,12 @@ const {text} = Astro.props;
 
     @media (min-width: 900px) {
         .quotation {
-            left: 48px;
             top: 40px;
         }
         p {
             font-size: 1.7rem;
             line-height: 34px;
-            padding-right: 250px;
+            padding-right: 120px;
         }
     }
 
