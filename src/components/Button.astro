@@ -2,7 +2,7 @@
 const {goto, text, variant} = Astro.props;
 ---
 
-<a href=`${goto}` class={variant}>{text}</a>
+<a href=`${goto}` class={variant} aria-label="Go to Pårørende Netværket site">{text}</a>
 
 <style>
     a {
