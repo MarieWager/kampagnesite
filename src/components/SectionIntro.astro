@@ -1,0 +1,17 @@
+---
+const {title,text,img} = Astro.props;
+---
+
+<section>
+    <div class="box">
+        <h2>{title}</h2>
+        <p>{text}</p>
+    </div>
+    <img src=`${img}` alt="Volunteer image">
+</section>
+
+<style>
+    .box {
+        background-color: var(--turquoise);
+    }
+</style>

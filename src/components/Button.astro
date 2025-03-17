@@ -1,42 +1,43 @@
 ---
-const {goto, text, variant} = Astro.props;
+const { goto, text, variant } = Astro.props;
 ---
 
 <a href=`${goto}` class={variant} aria-label="Go to Pårørende Netværket site">{text}</a>
 
 <style>
-    a {
-        text-align: center;
-        cursor: pointer;
-        text-decoration: none;
-        padding: 9px 50px;
-        border-radius: 26px;
-        margin-top: 5px;
-    }
+  a {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 9px 50px;
+    border-radius: 26px;
+    margin-top: 5px;
+  }
 
-    .dark {
-        color: var(--light-grey);
-        background-color: var(--dark-turquoise);
-        transition: 1s ease;
-        margin-top: 28px;
-    }
+  .dark {
+    color: var(--light-grey);
+    background-color: var(--dark-turquoise);
+    transition: 1s ease;
+    margin-top: 115px;
+  }
 
+  .light {
+    color: var(--light-grey);
+    background-color: var(--turquoise);
+    transition: 1s ease;
+    right: 40px;
+    position: absolute;
+  }
+
+  .dark:hover,
+  .light:hover {
+    background-color: var(--orange);
+    transition: 1s ease;
+  }
+
+  @media (min-width: 900px) {
     .light {
-        color: var(--light-grey);
-        background-color: var(--turquoise);
-        transition: 1s ease;
-        right: 40px;
-        position: absolute;
+      right: 120px;
     }
-
-    .dark:hover,.light:hover {
-        background-color: var(--orange);
-        transition: 1s ease;
-    }
-
-    @media (min-width: 900px) {
-        .light {
-            right: 120px;
-        }
-    } 
+  }
 </style>
