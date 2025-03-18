@@ -1,0 +1,72 @@
+---
+const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
+---
+
+<header>
+  <a class="button" href="https://www.misbrugsportalen.dk/bliv-frivillig.aspx">ANSØG</a>
+  <a class="logo" href="https://www.misbrugsportalen.dk" class="grow">
+    <img src="./logo.webp" alt="Logo" />
+  </a>
+  <nav class="nav">
+    <ul class="menu">
+      <li><a href=`#${elem1}` aria-label=`Go to ${elem1}`>{elem1}</a></li>
+      <li><a href=`#${elem2}` aria-label=`Go to ${elem2}`>{elem2}</a></li>
+      <li><a href=`#${elem3}` aria-label=`Go to ${elem3}`>{elem3}</a></li>
+      <li><a href=`#${elem4}` aria-label=`Go to ${elem4}`>{elem4}</a></li>
+      <li><a href=`#${elem5}` aria-label=`Go to ${elem5}`>{elem5}</a></li>
+    </ul>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-color: var(--dark-turquoise);
+    border-radius: 65px;
+    height: 55px;
+    width: 55px;
+    text-decoration: none;
+    color: var(--light-grey);
+    transition: 1s ease;
+  }
+
+  @media (min-width: 900px) {
+    .button {
+      display: none;
+    }
+  }
+
+  .button:hover {
+    background-color: var(--orange);
+    transition: 1s ease;
+  }
+
+  img {
+    height: 80%;
+    width: 80%;
+  }
+</style>
+
+<script>
+  // Burger menu functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.getElementById("burger");
+    const menu = document.querySelector(".menu");
+
+    if (burger && menu) {
+      burger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        burger.classList.toggle("active");
+      });
+    }
+  });
+</script>
