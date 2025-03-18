@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 const { text, apo } = Astro.props;
 ---
 
-<section>
+<section class="gap">
   <div class="citat">
     <img src=`${apo}` alt="Apostrophe" class="quotation" />
     <p>{text}</p>
@@ -19,7 +19,6 @@ const { text, apo } = Astro.props;
     border-radius: 8px;
     padding: 80px 0;
     margin: 20px;
-    margin-top: 190px;
     color: var(--light-grey);
   }
   .quotation {

@@ -90,6 +90,15 @@ p {
 }
 
 /* layouts */
+.gap {
+  margin-bottom: 25%;
+}
+@media (min-width: 900px) {
+  .gap {
+    margin-bottom: 10%;
+  }
+}
+
 :root {
   --desktop: 0 130px;
   --mobil: 0 35px;

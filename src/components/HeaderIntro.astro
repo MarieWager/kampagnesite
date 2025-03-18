@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 const { img, title, intro } = Astro.props;
 ---
 
-<section>
+<section class="gap">
   <img src=`${img}` alt="Image" class="puzzle_img" />
   <div class="box">
     <h1>{title}</h1>
@@ -22,7 +22,7 @@ const { img, title, intro } = Astro.props;
 
   .box {
     background-color: var(--medium-turquoise);
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@ const { img, title, intro } = Astro.props;
   @media (min-width: 900px) {
     section {
       grid-template-columns: 8% 8% 1fr 8% 8%;
-      grid-template-rows: 1fr 10% 20%;
+      grid-template-rows: 0.75fr 10% 20%;
     }
 
     .puzzle_img {
@@ -57,6 +57,7 @@ const { img, title, intro } = Astro.props;
     .box {
       grid-column: 3/4;
       height: max-content;
+      padding: 83px;
     }
   }
 </style>
