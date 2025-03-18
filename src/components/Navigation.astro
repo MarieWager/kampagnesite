@@ -2,7 +2,7 @@
 const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
 ---
 
-<header>
+<header id="header">
   <a class="button" href="https://www.misbrugsportalen.dk/bliv-frivillig.aspx">ANSØG</a>
   <a class="logo" href="https://www.misbrugsportalen.dk" class="grow">
     <img src="./logo.webp" alt="Logo" />
@@ -39,10 +39,16 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
     transition: 1s ease;
   }
 
+
   @media (min-width: 900px) {
     .button {
       display: none;
     }
+
+      img {
+    height: 80%;
+    width: 80%;
+  }
   }
 
   .button:hover {
@@ -52,20 +58,47 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
 
   img {
     height: 80%;
-    width: 80%;
   }
+
+/* Opacity-effekt */
+  #header {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+  }
+
+  #header.scrolled {
+    opacity: 0.7;
+  }
+
+  #header:hover, #header:focus-within {
+    opacity: 1;
+  }
+
+
 </style>
 
 <script>
-  // Burger menu functionality
   document.addEventListener("DOMContentLoaded", () => {
     const burger = document.getElementById("burger");
     const menu = document.querySelector(".menu");
+    const header = document.getElementById("header");
 
+    // Burger menu toggle
     if (burger && menu) {
       burger.addEventListener("click", () => {
         menu.classList.toggle("active");
         burger.classList.toggle("active");
+      });
+    }
+
+    // Scroll opacity effect
+    if (header) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
       });
     }
   });

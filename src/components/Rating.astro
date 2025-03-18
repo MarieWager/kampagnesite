@@ -18,13 +18,13 @@ const { title, title_2 } = Astro.props;
 
 <style>
   section {
-    margin-top: 40px;
+    margin-top: 15px;
     margin-bottom: 40px;
   }
   .fri {
     padding-top: 60px;
-    margin-left: 34%;
-    margin-bottom: -10px;
+   margin-left: 31%;
+  margin-bottom: -1%;
   }
 
   .for {
@@ -45,4 +45,22 @@ const { title, title_2 } = Astro.props;
     flex-direction: column;
     align-items: center;
   }
+
+ @media (max-width: 700px) {
+  .fri {
+    padding-top: 60px;
+   margin-left: 19%;
+  margin-bottom: 0px;
+  }
+
+  .for {
+    margin-left: 30%;
+  }
+  .grid_1-1-1 {
+    display: flex;
+    flex-direction: column;
+        gap: 5px;
+  }
+  }
+
 </style>
