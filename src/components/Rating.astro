@@ -1,48 +1,48 @@
 ---
 import Card from "./Card.astro";
-const {title, title_2}= Astro.props;
+const { title, title_2 } = Astro.props;
 ---
 
-<section>
-    <h1 class="fri">{title}</h1>
-    <h1 class="for">{title_2}</h1>
+<section id="FORTÆLLINGER">
+  <h1 class="fri">{title}</h1>
+  <h1 class="for">{title_2}</h1>
 
-    <section class="grid_1-1-1">
-
+  <section class="grid_1-1-1">
     <p><Card img="./img/Face_A.svg" name="Anette" apo="./img/apo_light.svg" text="For mig handler det om at gøre noget godt for andre – at vide, at min indsats virkelig gør en forskel, der hvor der er brug for det." icon="./icons/thumb_light.svg" /></p>
-   
-    <p><Card img="./img/Face_B.svg" name="Hjalmer" apo="./img/apo_medium.svg" text="Frivilligt arbejde giver mig muligheden for at gøre en forskel, møde nye mennesker og bruge min tid på noget, der virkelig betyder noget." icon="./icons/thumb_medium.svg"/></p>
-   
-    <p><Card img="./img/Face_C.svg" name="Mads" apo="./img/apo_dark.svg" text="Der er noget helt særligt ved at vide, at man hjælper nogen, der virkelig har brug for det – det gør frivilligt arbejde så givende." icon="./icons/thumb_dark.svg"/></p>
 
-    </section>
+    <p><Card img="./img/Face_B.svg" name="Hjalmer" apo="./img/apo_medium.svg" text="Frivilligt arbejde giver mig muligheden for at gøre en forskel, møde nye mennesker og bruge min tid på noget, der virkelig betyder noget." icon="./icons/thumb_medium.svg" /></p>
 
+    <p><Card img="./img/Face_C.svg" name="Mads" apo="./img/apo_dark.svg" text="Der er noget helt særligt ved at vide, at man hjælper nogen, der virkelig har brug for det – det gør frivilligt arbejde så givende." icon="./icons/thumb_dark.svg" /></p>
+  </section>
 </section>
 
 <style>
-    section{
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-      .fri{
-        padding-top: 60px;
-        margin-left: 34%;
-        margin-bottom: -10px;}
+  section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .fri {
+    padding-top: 60px;
+    margin-left: 34%;
+    margin-bottom: -10px;
+  }
 
-    .for{margin-left: 43%;}
+  .for {
+    margin-left: 43%;
+  }
 
-   .grid_1-1-1 {
-        display: flex;
-        gap: 25px;
-        text-align: center;
-        justify-content: center;
-        padding-left: 6rem;
-  padding-right: 6rem;
-    }
+  .grid_1-1-1 {
+    display: flex;
+    gap: 25px;
+    text-align: center;
+    justify-content: center;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 
-    p {
+  p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
+  }
 </style>
