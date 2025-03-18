@@ -115,12 +115,6 @@ header {
   margin-bottom: 40px;
 }
 
-.logo {
-  margin-top: 0.2rem;
-  width: 60px;
-  height: 60px;
-}
-
 .nav {
   position: block;
   background-color: var(--dark-blue);
@@ -167,6 +161,13 @@ header {
   transition: 1s ease;
 }
 
+a,
+.nav {
+  margin-top: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
 /* burger */
 .burger {
   display: flex;
@@ -188,31 +189,42 @@ header {
 
 @media (min-width: 900px) {
   header {
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
     display: grid;
-    grid-template-columns: 1fr 15% 1.5fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
     align-items: center;
   }
 
   .menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: right 0.6s ease-in-out;
+    position: relative;
+    background-color: var(--dark-blue);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    padding-left: 30px;
+    padding-right: 7.5vw;
+  }
+
+  .nav {
+    position: fixed;
+    display: flex;
+    width: inherit;
+    justify-self: end;
+  }
+
+  .logo {
+    justify-self: start;
+    padding-left: 7.5vw;
   }
 
   .burger {
     display: none;
-  }
-
-  .burger .cross-icon {
-    display: none; /* show cross */
   }
 }

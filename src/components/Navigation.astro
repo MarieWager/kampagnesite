@@ -4,7 +4,7 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
 
 <header>
   <a class="button" href="https://www.misbrugsportalen.dk/bliv-frivillig.aspx">ANSØG</a>
-  <a href="https://www.misbrugsportalen.dk" class="grow">
+  <a class="logo" href="https://www.misbrugsportalen.dk" class="grow">
     <img src="./logo.webp" alt="Logo" />
   </a>
   <nav class="nav">
@@ -39,16 +39,20 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
     transition: 1s ease;
   }
 
+  @media (min-width: 900px) {
+    .button {
+      display: none;
+    }
+  }
+
   .button:hover {
     background-color: var(--orange);
     transition: 1s ease;
   }
 
-  a,
-  .nav {
-    margin-top: 20px;
-    align-self: center;
-    justify-self: center;
+  img {
+    height: 80%;
+    width: 80%;
   }
 </style>
 
