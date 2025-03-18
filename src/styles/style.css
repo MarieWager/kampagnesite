@@ -91,21 +91,18 @@ p {
 
 /* layouts */
 :root {
-  --with: 0 100px;
-}
-
-section {
-  margin-bottom: 200px;
+  --desktop: 0 130px;
+  --mobil: 0 35px;
 }
 
 /* hover effects */
 .grow {
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 .grow:hover {
   transform: scale(1.1);
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 /* menu */
