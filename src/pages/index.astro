@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import Navigation from "../components/Navigation.astro";
-import Header from "../components/Header.astro";
+import HeaderIntro from "../components/HeaderIntro.astro";
 import SectionIntro from "../components/SectionIntro.astro";
 import AdvantagesBox from "../components/AdvantagesBox.astro";
 import Citation from "../components/Citation.astro";
@@ -21,12 +21,11 @@ import Footer from "../components/Footer.astro";
   </head>
 
   <body>
-    <Navigation />
-    <Header />
-    <SectionIntro />
-    <AdvantagesBox title="Gode grunde til at være frivillig" />
+    <Navigation elem1="INTRO" elem2="FORDELE" elem3="KRAV" elem4="FORTÆLLINGER" elem5="KONTAKT" />
+    <HeaderIntro title="Bliv frivillig rådgiver" img="./puzzle.webp" intro="Gør en forskel for pårørende i svære tider. Bliv en del af et stærkt fællesskab, hvor du kan hjælpe andre ved skabe tryghed og støtte." />
+    <SectionIntro title="At være frivillig i Pårørende Netværket" text1="Pårørende Netværket - Misbrugsportalen søger engagerede frivillige rådgivere til at støtte mennesker med misbrugsrelaterede udfordringer, uanset om det drejer sig om alkohol-, stof- eller medicinmisbrug." text2="Som frivillig bliver du en del af et varmt og fagligt stærkt fællesskab bestående af professionelle fra social- og sundhedsområdet, terapeuter, tidligere pårørende og misbrugskonsulenter. Uanset hvor i landet du bor, kan du være med, da vores tilbud er landsdækkende, og al intern kommunikation foregår online - dog med et nærværende og støttende fællesskab." img="./volunteer.webp" img_mobil="./volunteer_mobil.webp" />
+    <AdvantagesBox title="Gode grunde til at" title2="være" title3="frivillig" />
     <Citation apo="./img/apo_medium.svg" text="En fin samtale og enorm dygtig rådgiver. Føler mig så heldig, at jeg har fået ham. Der er efter min erfaring stor mangel på støtte og hjælp til pårørende og især i det her område, hvor jeg bor." />
-    <img class="woman" src="/woman.svg" alt="Illustration" />
     <SectionGuide />
     <Rating title="Frivillige" title_2="Fortællinger" />
     <Footer />

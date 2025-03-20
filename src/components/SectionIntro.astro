@@ -1,0 +1,67 @@
+---
+const { title, text1, text2, img, img_mobil } = Astro.props;
+---
+
+<section id="INTRO" class="gap">
+  <img src=`${img}` alt="Volunteer image" class="desktop-img" />
+  <div class="box">
+    <h2>{title}</h2>
+    <p>{text1}</p>
+    <img src=`${img_mobil}` alt="Volunteer image" class="mobile-img" />
+    <p>{text2}</p>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--turquoise);
+    color: var(--light-grey);
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  h2 {
+    padding: 40px 40px 0;
+  }
+
+  p {
+    padding: 20px 40px 50px;
+  }
+
+  @media (min-width: 900px) {
+    section {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 5% 1fr 5%;
+      grid-template-rows: 5% 1fr 5%;
+    }
+    .box {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      padding: 28px;
+      padding-bottom: 120px;
+      padding-top: 120px;
+    }
+
+    img {
+      position: absolute;
+      left: 7%;
+      width: 39%;
+      top: 148px;
+    }
+
+    .desktop-img {
+      display: block;
+    }
+
+    .mobile-img {
+      display: none;
+    }
+
+    p {
+      padding: 20px 40px 10px;
+    }
+  }
+</style>

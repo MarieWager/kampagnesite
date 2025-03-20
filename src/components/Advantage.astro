@@ -1,16 +1,21 @@
 ---
-const {icon, subtitle, text} = Astro.props;
+const { icon, subtitle, text } = Astro.props;
 ---
 
 <section>
-    <img src=`${icon}` alt="Icon">
-    <h2>{subtitle}</h2>
-    <p>{text}</p>
+  <img src=`${icon}` alt="Icon" />
+  <h3>{subtitle}</h3>
+  <p>{text}</p>
 </section>
 
 <style>
-    img {
-        height: 85px;
-        width: 85px;
-    }
+  img {
+    height: 85px;
+    width: 85px;
+  }
+
+  h3 {
+    padding-top: 20px;
+    padding-bottom: 8px;
+  }
 </style>

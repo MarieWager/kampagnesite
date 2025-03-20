@@ -1,25 +1,37 @@
 ---
 import Advantage from "./Advantage.astro";
-const {title} = Astro.props;
+const { title, title2, title3 } = Astro.props;
 ---
 
-<section>
-    <h1>{title}</h1>
-    <div class="grid_1-1">
-        <p><Advantage subtitle="Fælleskab og netværk" icon="./icons/people.svg" text="Bliv en del af et varmt og fagligt fællesskab, hvor du skaber meningsfulde forbindelser med dedikerede frivillige fra hele landet."/></p>
-        <p><Advantage subtitle="Personlig udvikling" icon="./icons/plant.svg" text="Styrk dine empatiske og faglige færdigheder, samtidig med at du får værdifuld erfaring, der kan være et plus på CV'et."/></p>
-        <p><Advantage subtitle="Meningsfuldt arbejde" icon="./icons/hand.svg" text="Oplev, hvordan din indsats gør en reel forskel for familier og skaber positiv forandring i deres liv."/></p>
-        <p><Advantage subtitle="Fleksibilitet og støtte" icon="./icons/time.svg" text="Få et frivilligjob med et skema, du selv kan tilrettelægge, og modtag støtte fra en mentor og erfarne kollegaer."/></p>
-    </div>
+<section id="FORDELE" class="gap">
+  <h1>{title}</h1>
+  <h1>{title2} <span style="font-style: italic;">{title3}</span></h1>
+  <div class="grid_1-1">
+    <Advantage subtitle="Fælleskab og netværk" icon="./icons/people.svg" text="Bliv en del af et varmt og fagligt fællesskab, hvor du skaber meningsfulde forbindelser med dedikerede frivillige fra hele landet." />
+    <Advantage subtitle="Personlig udvikling" icon="./icons/plant.svg" text="Styrk dine empatiske og faglige færdigheder, samtidig med at du får værdifuld erfaring, der kan være et plus på CV'et." />
+    <Advantage subtitle="Meningsfuldt arbejde" icon="./icons/hand.svg" text="Oplev, hvordan din indsats gør en reel forskel for familier og skaber positiv forandring i deres liv." />
+    <Advantage subtitle="Fleksibilitet og støtte" icon="./icons/time.svg" text="Få et frivilligjob med et skema, du selv kan tilrettelægge, og modtag støtte fra en mentor og erfarne kollegaer." />
+  </div>
 </section>
 
 <style>
-    section {
-        padding: var(--with);
-    }
+  section {
+    padding: var(--mobil);
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 900px) {
     .grid_1-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
+      gap: 110px;
     }
+
+    section {
+      padding: var(--desktop);
+      padding-top: 90px;
+    }
+  }
 </style>

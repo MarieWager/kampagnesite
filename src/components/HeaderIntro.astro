@@ -1,0 +1,63 @@
+---
+import Button from "./Button.astro";
+const { img, title, intro } = Astro.props;
+---
+
+<section class="gap">
+  <img src=`${img}` alt="Image" class="puzzle_img" />
+  <div class="box">
+    <h1>{title}</h1>
+    <p>{intro}</p>
+    <Button variant="dark" goto="https://www.misbrugsportalen.dk/bliv-frivillig.aspx" text="ANSØG HER" />
+  </div>
+</section>
+
+<style>
+  section {
+    color: var(--light-grey);
+    display: grid;
+    grid-template-columns: 4% 1fr 4%;
+    grid-template-rows: 1fr 8% 15%;
+  }
+
+  .box {
+    background-color: var(--medium-turquoise);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+
+  .puzzle_img {
+    grid-column: 1/4;
+    grid-row: 1/3;
+  }
+
+  p,
+  h1 {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: 900px) {
+    section {
+      grid-template-columns: 8% 8% 1fr 8% 8%;
+      grid-template-rows: 0.75fr 10% 20%;
+    }
+
+    .puzzle_img {
+      grid-column: 2/5;
+    }
+    .box {
+      grid-column: 3/4;
+      height: max-content;
+      padding: 65px;
+    }
+  }
+</style>

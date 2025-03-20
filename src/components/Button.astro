@@ -1,41 +1,77 @@
 ---
-const {goto, text, variant} = Astro.props;
+const { goto, text, variant } = Astro.props;
 ---
 
-<a href=`${goto}` class={variant}>{text}</a>
+<a href="${goto}" class={variant} aria-label="Go to Pårørende Netværket site" target="_blank">{text}</a>
 
 <style>
-    a {
-        position: absolute;
-        text-align: center;
-        cursor: pointer;
-        text-decoration: none;
-        padding: 9px 50px;
-        border-radius: 26px;
-        margin-top: 5px;
-    }
+  a {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 9px 50px;
+    border-radius: 26px;
+    margin-top: 5px;
+    height: auto;
+  }
 
-    .dark {
-        color: var(--light-grey);
-        background-color: var(--dark-turquoise);
-        transition: 1s ease;
-    }
+  .dark {
+    color: var(--light-grey);
+    background-color: var(--dark-turquoise);
+    transition: 1s ease;
+    margin-top: 5%;
+    position: static; /*starter ud statisk*/
+    z-index: 3000;
+  }
 
+  .light {
+    color: var(--light-grey);
+    background-color: var(--turquoise);
+    transition: 1s ease;
+    right: 40px;
+    position: absolute;
+  }
+
+  .dark:hover,
+  .light:hover {
+    background-color: var(--orange);
+    transition: 1s ease;
+    opacity: 1 !important; /* Sikrer, at den altid er 100% ved hover */
+  }
+
+  @media (min-width: 900px) {
     .light {
-        color: var(--light-grey);
-        background-color: var(--turquoise);
-        transition: 1s ease;
-        right: 40px;
+      right: 120px;
     }
 
-    .dark:hover,.light:hover {
-        background-color: var(--orange);
-        transition: 1s ease;
+    .dark.fixed {
+      position: fixed; /* Bliver fixed når den forlader sin position */
+      opacity: 0.8; /* Bliver lidt gennemsigtig */
+      bottom: 5%;
     }
 
-    @media (min-width: 900px) {
-        .light {
-            right: 120px;
-        }
-    } 
+    .dark.scrolled {
+      opacity: 0.8;
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".dark"); // Vælger kun .dark-knappen
+
+    if (!button) return; // Stopper scriptet, hvis knappen ikke findes
+
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        button.classList.add("scrolled");
+        button.classList.add("fixed"); // Tilføjer "fixed" når den er scrollet ned
+      } else {
+        button.classList.remove("scrolled");
+        button.classList.remove("fixed"); // Fjerner "fixed" når scrolled-positionen er nået
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  });
+</script>
