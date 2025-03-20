@@ -122,11 +122,12 @@ header {
 }
 
 .nav {
-  position: block;
+  position: fixed;
   background-color: var(--dark-blue);
   border-radius: 65px;
   height: 55px;
   width: 55px;
+  right: 6%;
 }
 
 .menu {
@@ -223,6 +224,7 @@ a,
     display: flex;
     width: inherit;
     justify-self: end;
+    right: 0;
   }
 
   .logo {
