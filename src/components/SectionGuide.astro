@@ -1,0 +1,81 @@
+---
+
+---
+
+<section>
+  <h1>Sådan bliver du frivillig...</h1>
+  <div class="grid">
+    <div class="part_1">
+      <h2>1 | Introduktionskursus</h2>
+      <p>Inden du udfylder ansøgningsskema, skal du have gennemført vores e-læring introduktionskursus som du finder på forsiden af rådgiverportalen.dk </p>
+    </div>
+    <div class="part_2">
+      <h2>​02 | Skriv ansøgning og CV</h2>
+      <p>Du skal skrive ansøgning, som skal sendes som separat dokument. Vi lægger også vægt på at der også indsendes et CV.</p>
+    </div>
+    <div class="part_3">
+      <h2>​03 | Udfyld skema</h2>
+      <p>Nu til ansøgningsskema. Felter markeret med * skal udfyldes for at du kan sende ansøgningsskemaet, samt en </p>
+    </div>
+    <div class="part_4">
+      <h2>04 | Svar på din ansøgning</h2>
+      <p>Når du har udfyldt skemaet, vil du få en automail med information om, hvornår du vil få svar på din ansøgning, samt eventuelt tid til en samtale.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--turquoise);
+    padding: 1rem;
+  }
+  h1, h2, p {
+    color: var(--light-grey);
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .grid {
+    width: 100%;
+    padding: 1rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "a ."
+        ". b"
+        "c ."
+        ". d";
+    gap: 1rem;
+  }
+  .part_1 {
+    grid-area: a;
+  }
+  .part_2 {
+    grid-area: b;
+  }
+  .part_3 {
+    grid-area: c;
+  }
+  .part_4 {
+    grid-area: d;
+  }
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  @media screen and (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); 
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      grid-template-areas: 
+        "a . c ."
+        ". b . d";
+    }
+  }
+</style>
