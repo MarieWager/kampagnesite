@@ -176,6 +176,10 @@ a,
   justify-self: center;
 }
 
+.logo {
+  grid-column: 2/3;
+}
+
 /* burger */
 .burger {
   display: flex;
@@ -229,8 +233,8 @@ a,
   }
 
   .logo {
-    justify-self: start;
     padding-left: 7.5vw;
+    grid-column: 1/2;
   }
 
   .burger {

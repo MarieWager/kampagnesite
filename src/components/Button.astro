@@ -24,15 +24,6 @@ const { goto, text, variant } = Astro.props;
     z-index: 3000;
   }
 
-  .dark.fixed {
-    position: fixed; /* Bliver fixed når den forlader sin position */
-    opacity: 0.8; /* Bliver lidt gennemsigtig */
-  }
-
-  .dark.scrolled {
-    opacity: 0.8;
-  }
-
   .light {
     color: var(--light-grey);
     background-color: var(--turquoise);
@@ -42,8 +33,7 @@ const { goto, text, variant } = Astro.props;
   }
 
   .dark:hover,
-  .light:hover,
-  .transparant:hover {
+  .light:hover {
     background-color: var(--orange);
     transition: 1s ease;
     opacity: 1 !important; /* Sikrer, at den altid er 100% ved hover */
@@ -52,6 +42,16 @@ const { goto, text, variant } = Astro.props;
   @media (min-width: 900px) {
     .light {
       right: 120px;
+    }
+
+    .dark.fixed {
+      position: fixed; /* Bliver fixed når den forlader sin position */
+      opacity: 0.8; /* Bliver lidt gennemsigtig */
+      bottom: 5%;
+    }
+
+    .dark.scrolled {
+      opacity: 0.8;
     }
   }
 </style>
