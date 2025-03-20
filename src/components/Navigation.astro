@@ -3,7 +3,7 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
 ---
 
 <header id="header">
-  <a class="button" href="https://www.misbrugsportalen.dk/bliv-frivillig.aspx">ANSØG</a>
+  <a class="button" target="_blank" href="https://www.misbrugsportalen.dk/bliv-frivillig.aspx">ANSØG</a>
   <a class="logo" href="https://www.misbrugsportalen.dk" class="grow">
     <img src="./logo.webp" alt="Logo" />
   </a>
@@ -39,16 +39,15 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
     transition: 1s ease;
   }
 
-
   @media (min-width: 900px) {
     .button {
       display: none;
     }
 
-      img {
-    height: 80%;
-    width: 80%;
-  }
+    img {
+      height: 80%;
+      width: 80%;
+    }
   }
 
   .button:hover {
@@ -60,7 +59,7 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
     height: 80%;
   }
 
-/* Opacity-effekt */
+  /* Opacity-effekt */
   #header {
     transition: opacity 0.3s ease;
     opacity: 1;
@@ -70,11 +69,10 @@ const { elem1, elem2, elem3, elem4, elem5 } = Astro.props;
     opacity: 0.7;
   }
 
-  #header:hover, #header:focus-within {
+  #header:hover,
+  #header:focus-within {
     opacity: 1;
   }
-
-
 </style>
 
 <script>
