@@ -2,38 +2,35 @@
 
 ---
 
-<section>
+<section class="gap" id="KRAV">
   <h1>Sådan bliver du frivillig...</h1>
   <div class="grid">
     <div class="part_1">
-      <h2>01 | Introduktionskursus</h2>
+      <h3>01 | Introduktionskursus</h3>
       <p>Inden du udfylder ansøgningsskema, skal du have gennemført vores e-læring introduktionskursus som du finder på forsiden af rådgiverportalen.dk</p>
     </div>
     <div class="part_2">
-      <h2>​02 | Skriv ansøgning og CV</h2>
+      <h3>​02 | Skriv ansøgning og CV</h3>
       <p>Du skal skrive ansøgning, som skal sendes som separat dokument. Vi lægger også vægt på at der også indsendes et CV.</p>
     </div>
     <div class="part_3">
-      <h2>​03 | Udfyld skema</h2>
+      <h3>​03 | Udfyld skema</h3>
       <p>Nu til ansøgningsskema. Felter markeret med * skal udfyldes for at du kan sende ansøgningsskemaet, samt en</p>
     </div>
     <div class="part_4">
-      <h2>04 | Svar på din ansøgning</h2>
+      <h3>04 | Svar på din ansøgning</h3>
       <p>Når du har udfyldt skemaet, vil du få en automail med information om, hvornår du vil få svar på din ansøgning, samt eventuelt tid til en samtale.</p>
     </div>
   </div>
   <div id="helpGroup">
     <div class="helpContainer">
-      <h2>
-        Spørgsmål eller problemer?
-      </h2>
+      <h2>Spørgsmål eller problemer?</h2>
       <p>
         Har du spørgsmål eller oplever problemer med at sende din ansøgning, er du meget velkommen til at kontakte sekretariatet alle hverdage fra kl. 10.00 - 15.00 på telefon <span>70 60 48 46</span>
       </p>
     </div>
     <button type="button" aria-label="HelpButton" id="#helpBtn">Hjælp?</button>
   </div>
-  
 </section>
 
 <style>
@@ -43,6 +40,7 @@
     background-color: var(--turquoise);
     padding: 1rem;
     padding-bottom: 2rem;
+    margin-top: 10%;
   }
   .grid {
     position: relative;
@@ -110,11 +108,11 @@
     margin-bottom: 3rem;
   }
   h1,
-  h2,
+  h3,
   p {
     color: var(--light-grey);
   }
-  h2 {
+  h3 {
     font-weight: bold;
   }
 
@@ -155,8 +153,8 @@
 
   /*********    Button Styling    ***********/
 
-  
-  .helpContainer h2, .helpContainer p {
+  .helpContainer h2,
+  .helpContainer p {
     color: var(--light-grey);
   }
   .helpContainer p span {
@@ -176,7 +174,8 @@
     width: 69px;
     height: 69px;
   }
-  button:hover, button.active {
+  button:hover,
+  button.active {
     background-color: var(--dark-turquoise);
   }
 
@@ -185,14 +184,13 @@
     visibility: visible;
   }
   @media screen and (min-width: 900px) {
-
     /*********    Container + Grid Stylings    ***********/
 
     section {
       padding: 2rem 3rem;
       padding-bottom: 3rem;
     }
-    
+
     .grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -251,16 +249,16 @@
 </style>
 
 <script defer>
-  document.addEventListener('DOMContentLoaded', () => {
-  const helpContainer = document.querySelector('.helpContainer');
-  const helpBtn = document.getElementById('#helpBtn');
+  document.addEventListener("DOMContentLoaded", () => {
+    const helpContainer = document.querySelector(".helpContainer");
+    const helpBtn = document.getElementById("#helpBtn");
 
-  helpBtn.addEventListener('click', toggleHelp);
-  helpBtn.addEventListener('touchstart', toggleHelp);
+    helpBtn.addEventListener("click", toggleHelp);
+    helpBtn.addEventListener("touchstart", toggleHelp);
 
-  function toggleHelp() {
-    helpContainer.classList.toggle('show');
-    helpBtn.classList.toggle('active');
-  }
-});
+    function toggleHelp() {
+      helpContainer.classList.toggle("show");
+      helpBtn.classList.toggle("active");
+    }
+  });
 </script>
