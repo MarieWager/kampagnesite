@@ -2,7 +2,7 @@
 const { goto, text, variant } = Astro.props;
 ---
 
-<a href=`${goto}` class={variant} aria-label="Go to Pårørende Netværket site" target="_blank">{text}</a>
+<a href="${goto}" class={variant} aria-label="Go to Pårørende Netværket site" target="_blank">{text}</a>
 
 <style>
   a {
@@ -12,13 +12,25 @@ const { goto, text, variant } = Astro.props;
     padding: 9px 50px;
     border-radius: 26px;
     margin-top: 5px;
+    height: auto;
   }
 
   .dark {
     color: var(--light-grey);
     background-color: var(--dark-turquoise);
     transition: 1s ease;
-    margin-top: 3%;
+    margin-top: 5%;
+    position: static; /*starter ud statisk*/
+    z-index: 3000;
+  }
+
+  .dark.fixed {
+    position: fixed; /* Bliver fixed når den forlader sin position */
+    opacity: 0.8; /* Bliver lidt gennemsigtig */
+  }
+
+  .dark.scrolled {
+    opacity: 0.8;
   }
 
   .light {
@@ -30,9 +42,11 @@ const { goto, text, variant } = Astro.props;
   }
 
   .dark:hover,
-  .light:hover {
+  .light:hover,
+  .transparant:hover {
     background-color: var(--orange);
     transition: 1s ease;
+    opacity: 1 !important; /* Sikrer, at den altid er 100% ved hover */
   }
 
   @media (min-width: 900px) {
@@ -41,3 +55,23 @@ const { goto, text, variant } = Astro.props;
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".dark"); // Vælger kun .dark-knappen
+
+    if (!button) return; // Stopper scriptet, hvis knappen ikke findes
+
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        button.classList.add("scrolled");
+        button.classList.add("fixed"); // Tilføjer "fixed" når den er scrollet ned
+      } else {
+        button.classList.remove("scrolled");
+        button.classList.remove("fixed"); // Fjerner "fixed" når scrolled-positionen er nået
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  });
+</script>
