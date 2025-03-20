@@ -233,6 +233,7 @@ a,
   }
 
   .logo {
+    justify-self: start;
     padding-left: 7.5vw;
     grid-column: 1/2;
   }
