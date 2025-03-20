@@ -148,6 +148,7 @@ header {
   width: 50vw;
   height: 50vh;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .menu li {
